@@ -367,9 +367,12 @@
 
     .main {
       display: grid;
-      grid-template-columns: minmax(280px, 410px) minmax(0, 1fr);
+      grid-template-columns: minmax(300px, 410px) minmax(560px, 800px);
       align-items: center;
-      gap: 22px;
+      justify-content: center;
+      gap: clamp(24px, 3vw, 56px);
+      width: min(100%, 1320px);
+      margin: 0 auto;
       min-height: 0;
     }
 
@@ -491,6 +494,9 @@
 
     .stage {
       position: relative;
+      width: 100%;
+      max-width: 800px;
+      justify-self: start;
       min-height: min(68vh, 670px);
       display: grid;
       place-items: center;
@@ -552,7 +558,7 @@
 
     .sphere {
       position: relative;
-      width: min(50vw, 620px);
+      width: min(42vw, 610px);
       aspect-ratio: 1;
       transform-style: preserve-3d;
       animation: rotateSphere 16s linear infinite;
@@ -563,7 +569,7 @@
     }
 
     .sphere.sparse {
-      width: min(55vw, 690px);
+      width: min(44vw, 650px);
       --chip-min-width: 150px;
       --chip-height: 70px;
       --chip-padding: 26px;
@@ -571,7 +577,7 @@
     }
 
     .sphere.medium {
-      width: min(53vw, 650px);
+      width: min(43vw, 630px);
       --chip-min-width: 118px;
       --chip-height: 54px;
       --chip-padding: 20px;
